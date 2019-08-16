@@ -5,6 +5,8 @@ import 'package:flutter_ui_practice/ui/column.dart';
 import 'package:flutter_ui_practice/ui/stack.dart';
 import 'package:flutter_ui_practice/ui/text.dart';
 import 'package:flutter_ui_practice/ui/image.dart';
+import 'package:flutter_ui_practice/ui/listView.dart';
+import 'package:flutter_ui_practice/ui/demo1.dart';
 
 class Router {
   static const home = '/';
@@ -14,6 +16,8 @@ class Router {
   static const column = '/column';
   static const stack = '/stack';
   static const image = '/image';
+  static const staticListView = '/staticListView';
+  static const demo1 = '/demo1';
 
   static getRouter() {
     return {
@@ -24,6 +28,8 @@ class Router {
       Router.column     :   (context) => MyColumn(),
       Router.stack      :   (context) => MyStack(),
       Router.image      :   (context) => MyImage(),
+      Router.staticListView:(context) => StaticListView(),
+      Router.demo1      :   (context) => Demo1(),
      };
   }
 }

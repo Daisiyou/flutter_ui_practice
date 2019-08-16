@@ -40,6 +40,15 @@ class MyImage extends StatelessWidget {
             width: 150,
             fit: BoxFit.contain,
           ),
+          Row(
+            children: <Widget>[
+              Icon(
+                Icons.add,
+                size: 100.0,
+                color: Colors.redAccent,
+              ),
+            ],
+          ),
         ],
       ),
     );

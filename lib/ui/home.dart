@@ -70,6 +70,27 @@ class Home extends StatelessWidget {
               },
             ),
           ),
+          Container(
+            height: 100,
+            child: RaisedButton(
+              color: Colors.green,
+              child: Text('StaticListView'),
+              onPressed: (){
+                Navigator.pushNamed(context, Router.staticListView);
+              },
+            ),
+          ),
+
+          Container(
+            height: 100,
+            child: RaisedButton(
+              color: Colors.red,
+              child: Text('Demo1'),
+              onPressed: (){
+                Navigator.pushNamed(context, Router.demo1);
+              },
+            ),
+          ),
         ],
       ),
     );
