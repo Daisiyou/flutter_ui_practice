@@ -13,6 +13,16 @@ class Home extends StatelessWidget {
           Container(
             height: 100,
             child: RaisedButton(
+              color: Colors.green,
+              child: Text('Text'),
+              onPressed: () {
+                Navigator.pushNamed(context, Router.text);
+              },
+            ),
+          ),
+          Container(
+            height: 100,
+            child: RaisedButton(
               color: Colors.red,
               child: Text('Container'),
               onPressed: () {
@@ -47,6 +57,16 @@ class Home extends StatelessWidget {
               child: Text('Stack'),
               onPressed: (){
                 Navigator.pushNamed(context, Router.stack);
+              },
+            ),
+          ),
+          Container(
+            height: 100,
+            child: RaisedButton(
+              color: Colors.yellow,
+              child: Text('Image'),
+              onPressed: (){
+                Navigator.pushNamed(context, Router.image);
               },
             ),
           ),
