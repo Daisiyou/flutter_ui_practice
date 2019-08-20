@@ -84,6 +84,17 @@ class Home extends StatelessWidget {
           Container(
             height: 100,
             child: RaisedButton(
+              color: Colors.yellow,
+              child: Text('ListViews'),
+              onPressed: (){
+                Navigator.pushNamed(context, Router.listViews);
+              },
+            ),
+          ),
+
+          Container(
+            height: 100,
+            child: RaisedButton(
               color: Colors.red,
               child: Text('Demo1'),
               onPressed: (){

@@ -17,6 +17,7 @@ class Router {
   static const stack = '/stack';
   static const image = '/image';
   static const staticListView = '/staticListView';
+  static const listViews = 'listViews';
   static const demo1 = '/demo1';
 
   static getRouter() {
@@ -29,6 +30,7 @@ class Router {
       Router.stack      :   (context) => MyStack(),
       Router.image      :   (context) => MyImage(),
       Router.staticListView:(context) => StaticListView(),
+      Router.listViews  :   (context) => ListViews(),
       Router.demo1      :   (context) => Demo1(),
      };
   }

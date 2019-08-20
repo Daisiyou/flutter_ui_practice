@@ -5,6 +5,15 @@ class Demo1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+            tooltip: 'back',
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            }),
         title: Text('Demo1'),
         elevation: 0,
       ),
@@ -49,7 +58,7 @@ class PetCard extends StatelessWidget {
             decoration: BoxDecoration(
               gradient: LinearGradient(colors: [
                 Color.fromARGB(0, 0, 0, 0),
-                Color.fromARGB(80, 0, 0, 0),
+                Color.fromARGB(100, 100, 0, 0),
               ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
             ),
           ),
@@ -63,7 +72,7 @@ class PetCard extends StatelessWidget {
       margin: EdgeInsets.only(top: 16),
       padding: EdgeInsets.symmetric(horizontal: 16),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Row(
@@ -153,36 +162,45 @@ class PetCard extends StatelessWidget {
   }
 
   Widget renderInteractionArea() {
-      return Container(
-        margin: EdgeInsets.only(top: 16),
-        padding: EdgeInsets.symmetric(horizontal: 16),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            Row(
-              children: <Widget>[
-                Icon(Icons.message, color: Colors.black12,),
-                Padding(padding: EdgeInsets.only(left: 6)),
-                Text('${data.replies}'),
-              ],
-            ),
-            Row(
-              children: <Widget>[
-                Icon(Icons.favorite, color: Colors.yellow[700],),
-                Padding(padding: EdgeInsets.only(left: 6)),
-                Text('${data.likes}'),
-              ],
-            ),
-            Row(
-              children: <Widget>[
-                Icon(Icons.share, color: Colors.black12,),
-                Padding(padding: EdgeInsets.only(left: 6)),
-                Text('${data.shares}'),
-              ],
-            ),
-          ],
-        ),
-      );
+    return Container(
+      margin: EdgeInsets.only(top: 16),
+      padding: EdgeInsets.symmetric(horizontal: 16),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Row(
+            children: <Widget>[
+              Icon(
+                Icons.message,
+                color: Colors.black12,
+              ),
+              Padding(padding: EdgeInsets.only(left: 6)),
+              Text('${data.replies}'),
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              Icon(
+                Icons.favorite,
+                color: Colors.yellow[700],
+              ),
+              Padding(padding: EdgeInsets.only(left: 6)),
+              Text('${data.likes}'),
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              Icon(
+                Icons.share,
+                color: Colors.black12,
+              ),
+              Padding(padding: EdgeInsets.only(left: 6)),
+              Text('${data.shares}'),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 
   @override
@@ -207,7 +225,9 @@ class PetCard extends StatelessWidget {
           renderUserInfo(),
           renderPublishContent(),
           renderInteractionArea(),
-          SizedBox(height: 16,),
+          SizedBox(
+            height: 16,
+          ),
         ],
       ),
     );
