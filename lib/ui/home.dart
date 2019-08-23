@@ -9,6 +9,7 @@ class Home extends StatelessWidget {
         title: Text('Home'),
       ),
       body: ListView(
+        itemExtent: 40,
         children: <Widget>[
           Container(
             height: 100,
@@ -99,6 +100,46 @@ class Home extends StatelessWidget {
               child: Text('Demo1'),
               onPressed: (){
                 Navigator.pushNamed(context, Router.demo1);
+              },
+            ),
+          ),
+          Container(
+            height: 100,
+            child: RaisedButton(
+              color: Colors.green,
+              child: Text('BottomNavigation'),
+              onPressed: (){
+                Navigator.pushNamed(context, Router.bottomNav);
+              },
+            ),
+          ),
+          Container(
+            height: 100,
+            child: RaisedButton(
+              color: Colors.yellow,
+              child: Text('AnimatedContainer'),
+              onPressed: (){
+                Navigator.pushNamed(context, Router.animatedCon);
+              },
+            ),
+          ),
+          Container(
+            height: 100,
+            child: RaisedButton(
+              color: Colors.red,
+              child: Text('AnimatedCross'),
+              onPressed: (){
+                Navigator.pushNamed(context, Router.animatedCross);
+              },
+            ),
+          ),
+          Container(
+            height: 100,
+            child: RaisedButton(
+              color: Colors.green,
+              child: Text('TextFieldDemo'),
+              onPressed: (){
+                Navigator.pushNamed(context, Router.textFieldDemo);
               },
             ),
           ),
